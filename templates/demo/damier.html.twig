@@ -1,0 +1,28 @@
+        {% extends 'demo/base.html.twig' %}
+        {% block title %}
+            ACCUEIL
+        {% endblock %}
+        
+        {% block stylesheets %}
+            <style>
+                    .blanc
+                    {
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                    }
+                    .noir
+                    {
+                        width: 10px;
+                        height: 10px;
+                        background-color: black;
+                    }
+                </style>       
+        {% endblock %}
+
+        {% block body %}
+            <h1> un beau  </h1>
+            <div>
+            {{damier|raw}}
+            </div>
+         {% endblock %}   

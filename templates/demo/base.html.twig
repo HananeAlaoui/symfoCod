@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <style>
+
+                body
+                {
+                    background-color : blue;
+                }
+                .bande-haut
+                {
+                    background-image : url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6mv24FQR_mimXrdf6yN1ZQdbD8PKIcnnX1w&usqp=CAU");
+                    height : 120px;
+              
+                }
+                .bande-bas {
+                    position: absolute;
+                    bottom: 0px;
+                    height: 100px;
+                    width: 100%;
+                    border: 2px solid black;
+                    background-color: white;
+                    text-align: center;
+                    border-radius: 20px;
+                }
+        </style>
+        {% block stylesheets %}
+
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+ 
+            <div class="bande-haut">
+               </div>
+             
+        {% block body %}{% endblock %}
+            <div class="bande-bas">
+                </div>
+    </body>
+</html>
