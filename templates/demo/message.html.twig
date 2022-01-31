@@ -1,0 +1,33 @@
+
+{% extends 'demo/base.html.twig' %}
+
+{% block title %}Damier{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .damierCentre
+        {
+            align-self: center;
+        }
+        .blanc
+        {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+        }
+        .noir
+        {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            display: inline-block;
+        }
+    </style>
+           
+{% endblock %}
+      
+{% block body %}
+<h3> Laissez votre message</h3>
+{{form(formulaire)}}
+{% endblock %}

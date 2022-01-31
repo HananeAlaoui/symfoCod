@@ -9,3 +9,7 @@ accueil:
 damier:
     path: /damier
     controller: App\Controller\DemoController::damier
+
+message:
+    path: /message
+    controller: App\Controller\DemoController::message
